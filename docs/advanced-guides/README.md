@@ -5,9 +5,9 @@ build a certain capability or feature of your app with React Router.
 
 ## Building the User Interface
 
-- [Using Layouts](#TODO)
-- ["Not Found" Routes (404)](#TODO)
-- [Using Route Config Objects](#TODO)
+- [Using Layouts](layouts.md)
+- ["Not Found" Routes (404)](not-found.md)
+- [Using Route Config Objects](route-configs.md)
 
 ## Common User Flows
 
