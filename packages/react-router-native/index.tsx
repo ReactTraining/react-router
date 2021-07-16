@@ -26,6 +26,7 @@ import {
   useInRouterContext,
   useLocation,
   useMatch,
+  useRoutePathname,
   useNavigate,
   useOutlet,
   useParams,
@@ -62,6 +63,7 @@ export {
   useOutlet,
   useParams,
   useResolvedPath,
+  useRoutePathname,
   useRoutes
 };
 

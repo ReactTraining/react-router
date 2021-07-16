@@ -28,6 +28,7 @@ import {
   createRoutesFromArray,
   createRoutesFromChildren,
   generatePath,
+  useRoutePathname,
   matchRoutes,
   matchPath,
   resolvePath
@@ -74,6 +75,7 @@ export {
   useLocation,
   useMatch,
   useNavigate,
+  useRoutePathname,
   useOutlet,
   useParams,
   useResolvedPath,
