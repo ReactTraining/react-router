@@ -149,6 +149,32 @@ export function HashRouter({ children, window }: HashRouterProps) {
   );
 }
 
+/**
+ * A <Router> for use in web browsers with custom history. Provides the cleanest URLs.
+ */
+export function HistoryRouter({ children, history }: HistoryRouterProps) {
+  let [state, setState] = React.useState({
+    action: history.action,
+    location: history.location
+  });
+
+  React.useLayoutEffect(() => history.listen(setState), [history]);
+
+  return (
+      <Router
+          children={children}
+          action={state.action}
+          location={state.location}
+          navigator={history}
+      />
+  );
+}
+
+export interface HistoryRouterProps {
+  children?: React.ReactNode;
+  history: BrowserHistory;
+}
+
 function isModifiedEvent(event: React.MouseEvent) {
   return !!(event.metaKey || event.altKey || event.ctrlKey || event.shiftKey);
 }
